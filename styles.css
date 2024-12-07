@@ -26,7 +26,7 @@ body {
 .loading-text {
     font-size: 6em;
     font-weight: bold;
-    color: black;
+    color: white;
     transform: rotateX(90deg);
     animation: flip 2s ease-out forwards; 
 }
@@ -76,7 +76,7 @@ html, body {
 /* Прочие стили для основного контента */
 .outer-wrapper {
     margin: 20px auto;
-    max-width: 90%; 
+    max-width: 95%; 
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
