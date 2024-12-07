@@ -420,3 +420,36 @@ html, body {
     font-size: 0.9em; 
     color: #777;
 }
+
+/* Контейнер для снежинок */
+#snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Снежинки не мешают взаимодействию с сайтом */
+    overflow: hidden;
+    z-index: 1000; /* Убедитесь, что снежинки поверх всего контента */
+  }
+  
+  /* Стили для каждой снежинки */
+  .snowflake {
+    position: absolute;
+    top: -50px; /* Снежинка появляется за верхним краем экрана */
+    color: white; /* Белый цвет для снежинок */
+    font-size: 1em; /* Базовый размер */
+    opacity: 0.8; /* Прозрачность */
+    animation: fall linear infinite; /* Анимация падения */
+  }
+  
+  /* Анимация падения */
+  @keyframes fall {
+    0% {
+      transform: translateY(0) translateX(0); /* Начальная позиция */
+    }
+    100% {
+      transform: translateY(100vh) translateX(calc(100vw * var(--horizontal-shift))); /* Падение вниз с отклонением */
+    }
+  }
+  
