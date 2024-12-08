@@ -5,7 +5,6 @@ body {
     background-color: #ff8c00;
     color: #333;
     height: 100%;
-    overflow: hidden; 
 }
 
 /* Загрузочный экран */
@@ -70,7 +69,6 @@ body {
 html, body {
     height: 100%;
     margin: 0;
-    overflow: hidden; 
 }
 
 /* Прочие стили для основного контента */
@@ -450,6 +448,164 @@ html, body {
     }
     100% {
       transform: translateY(100vh) translateX(calc(100vw * var(--horizontal-shift))); /* Падение вниз с отклонением */
+    }
+  }
+   
+
+    /* Гирлянда */
+    
+  .lightrope {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    top: 20px; /* Отступ от верха */
+    left: 0;
+    z-index: 1;
+    margin: -15px 0 0 0;
+    padding: 0;
+    pointer-events: none;
+    width: 100%;
+  }
+  
+  .lightrope li {
+    position: relative;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 12px;
+    height: 28px;
+    border-radius: 50%;
+    margin: 20px;
+    background: #00f7a5; /* Зеленый */
+    box-shadow: 0px 4.66667px 24px 3px #00f7a5;
+    animation-name: flash-1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .lightrope li:nth-child(2n) {
+    background: #0077ff; /* Синий */
+    box-shadow: 0px 4.66667px 24px 3px rgba(0, 119, 255, 0.5);
+    animation-name: flash-2;
+    animation-duration: 1s;
+  }
+  
+  .lightrope li:nth-child(3n) {
+    background: #f70094; /* Розовый */
+    box-shadow: 0px 4.66667px 24px 3px #f70094;
+    animation-name: flash-3;
+    animation-duration: 1.5s;
+  }
+  
+  .lightrope li:nth-child(4n) {
+    background: #f7c700; /* Желтый */
+    box-shadow: 0px 4.66667px 24px 3px #f7c700;
+    animation-name: flash-4;
+    animation-duration: 1.3s;
+  }
+  
+  .lightrope li:nth-child(5n) {
+    background: #ff7f00; /* Оранжевый */
+    box-shadow: 0px 4.66667px 24px 3px #ff7f00;
+    animation-name: flash-5;
+    animation-duration: 1.8s;
+  }
+  
+  /* Провод, соединяющий лампочки */
+  .lightrope li:before {
+    content: "";
+    position: absolute;
+    background: #222;
+    width: 10px;
+    height: 9.33333px;
+    border-radius: 3px;
+    top: -4.66667px;
+    left: 1px;
+  }
+  
+  /* Хвостики лампочек */
+  .lightrope li:after {
+    content: "";
+    top: -14px;
+    left: 9px;
+    position: absolute;
+    width: 52px;
+    height: 18.66667px;
+    border-bottom: solid #222 2px;
+    border-radius: 50%;
+  }
+  
+  .lightrope li:last-child:after {
+    content: none;
+  }
+  
+  .lightrope li:first-child {
+    margin-left: -40px;
+  }
+  
+  /* Анимации для каждой лампочки */
+  
+  /* Мигание первой лампочки (Зеленый) */
+  @keyframes flash-1 {
+    0%, 100% {
+      background: #00f7a5;
+      box-shadow: 0px 4.66667px 24px 3px #00f7a5;
+    }
+    50% {
+      background: rgba(0, 247, 165, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(0, 247, 165, 0.2);
+    }
+  }
+  
+  /* Мигание второй лампочки (Синий) */
+  @keyframes flash-2 {
+    0%, 100% {
+      background: #0077ff;
+      box-shadow: 0px 4.66667px 24px 3px rgba(0, 119, 255, 0.5);
+    }
+    50% {
+      background: rgba(0, 119, 255, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(0, 119, 255, 0.2);
+    }
+  }
+  
+  /* Мигание третьей лампочки (Розовый) */
+  @keyframes flash-3 {
+    0%, 100% {
+      background: #f70094;
+      box-shadow: 0px 4.66667px 24px 3px #f70094;
+    }
+    50% {
+      background: rgba(247, 0, 148, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(247, 0, 148, 0.2);
+    }
+  }
+  
+  /* Мигание четвертой лампочки (Желтый) */
+  @keyframes flash-4 {
+    0%, 100% {
+      background: #f7c700;
+      box-shadow: 0px 4.66667px 24px 3px #f7c700;
+    }
+    50% {
+      background: rgba(247, 199, 0, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(247, 199, 0, 0.2);
+    }
+  }
+  
+  /* Мигание пятой лампочки (Оранжевый) */
+  @keyframes flash-5 {
+    0%, 100% {
+      background: #ff7f00;
+      box-shadow: 0px 4.66667px 24px 3px #ff7f00;
+    }
+    50% {
+      background: rgba(255, 127, 0, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(255, 127, 0, 0.2);
     }
   }
   

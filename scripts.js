@@ -48,5 +48,17 @@ window.addEventListener('load', function() {
 
       snowContainer.appendChild(snowflake);
     }
-  });
 
+  });
+  
+// Количество лампочек, которые мы хотим создать
+const numberOfLights = 40;
+
+// Ссылка на контейнер для гирлянды
+const lightrope = document.getElementById('lightrope');
+
+// Создаем лампочки и добавляем их в контейнер
+for (let i = 0; i < numberOfLights; i++) {
+  const light = document.createElement('li');
+  lightrope.appendChild(light);
+}
