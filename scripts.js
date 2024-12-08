@@ -18,19 +18,6 @@ window.addEventListener('click', function(event) {
   }
 });
 
-window.addEventListener('load', function() {
-  const loadingScreen = document.getElementById('loading-screen');
-  const outerWrapper = document.querySelector('.outer-wrapper');
-
-  setTimeout(() => {
-    loadingScreen.style.display = 'none'; 
-    outerWrapper.style.display = 'block'; 
-
-    document.body.style.overflow = 'auto'; 
-  }, 2000); 
-});
-
-
 
   document.addEventListener('DOMContentLoaded', () => {
     const snowContainer = document.getElementById('snowflakes');

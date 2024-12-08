@@ -2,73 +2,22 @@
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: #ff8c00;
+    background: linear-gradient(to bottom, #ff6f00, #e65100, #212121);
+    background-attachment: fixed;
     color: #333;
     height: 100%;
 }
 
-/* Загрузочный экран */
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ff8c00;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; 
-}
-
-/* Текст на загрузочном экране */
-.loading-text {
-    font-size: 6em;
-    font-weight: bold;
-    color: white;
-    transform: rotateX(90deg);
-    animation: flip 2s ease-out forwards; 
-}
-
-/* Анимация переворота текста */
-@keyframes flip {
-    0% {
-        transform: rotateX(90deg);
-    }
-    50% {
-        transform: rotateX(0deg);
-    }
-    100% {
-        transform: rotateX(0deg);
-    }
-}
-
-/* Показать основной контент после анимации */
-@keyframes showContent {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 /* Когда загрузка завершена */
 .outer-wrapper {
-    animation: showContent 2s ease-out forwards;
+    animation: none;
     background-color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    opacity: 0; /* Скрыт по умолчанию */
-}
-
-/* Убрать полосы прокрутки, когда сайт загружается */
-html, body {
-    height: 100%;
-    margin: 0;
+    opacity: 1; /* Скрыт по умолчанию */
 }
 
 /* Прочие стили для основного контента */
@@ -89,6 +38,7 @@ html, body {
     padding: 10px 20px;
     background-color: #fff;
     border-bottom: 2px solid #ff8c00;
+    width: 97.70%;
 }
 
 /* Логотип */
@@ -159,11 +109,11 @@ html, body {
 /* Приветствие */
 .greeting {
     display: inline-block;
-    font-size: 1em;
+    font-size: 1.5em;
     background-color: #ff8c00;
     color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
+    padding: 10px 15px;
+    border-radius: 30px;
     margin-bottom: 20px;
 }
 
