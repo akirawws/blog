@@ -49,3 +49,9 @@ for (let i = 0; i < numberOfLights; i++) {
   const light = document.createElement('li');
   lightrope.appendChild(light);
 }
+
+
+document.querySelector('.menu-toggle').addEventListener('click', function () {
+  this.classList.toggle('active');
+  document.querySelector('.nav').classList.toggle('open');
+});

@@ -559,3 +559,93 @@ body {
     }
   }
   
+/* Медиазапрос для телефонов */
+@media screen and (max-width: 768px) {
+  /* Общие стили */
+  body {
+      font-size: 16px; /* Увеличим шрифт для удобства чтения */
+  }
+
+  /* Внешняя рамка */
+  .outer-wrapper {
+      padding: 10px;
+  }
+
+  /* Шапка сайта */
+  .header {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .logo {
+      font-size: 1.2em;
+  }
+
+  .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+  }
+
+  .nav a {
+      font-size: 0.9em;
+  }
+
+  /* Баннер и аватар */
+  .banner {
+      height: 200px; /* Уменьшим высоту баннера */
+  }
+
+  .avatar {
+      width: 100px; 
+      height: 100px;
+      bottom: -40px; /* Скорректируем отступ */
+      left: calc(50% - 50px); /* Центрируем аватар */
+  }
+
+  /* Блок "Обо мне" */
+  .about-me {
+      padding: 60px 10px 10px;
+  }
+
+  .about-text {
+      flex-direction: column; /* Перестраиваем блоки вертикально */
+      gap: 15px;
+  }
+
+  .about-block {
+      padding: 15px; /* Уменьшим отступы */
+  }
+
+  /* Модальное окно */
+  .modal-content {
+      width: 90%; /* Уменьшим ширину */
+  }
+
+  /* Социальные ссылки */
+  .social-links {
+      gap: 10px;
+  }
+
+  .social-links a img {
+      width: 25px; /* Уменьшим иконки */
+      height: 25px;
+  }
+
+  /* Контактная информация */
+  .developer-info p {
+      font-size: 0.8em; /* Уменьшим размер текста */
+  }
+
+  /* Гирлянда */
+  .lightrope {
+      top: 10px; /* Уменьшим отступ сверху */
+  }
+
+  .lightrope li {
+      width: 10px;
+      height: 20px;
+  }
+}
