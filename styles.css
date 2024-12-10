@@ -1,7 +1,7 @@
 /* Общие стили */
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+   font-family: 'Roboto Mono', monospace;
     background: linear-gradient(to bottom, #ff6f00, #e65100, #212121);
     background-attachment: fixed;
     color: #333;

@@ -1,7 +1,7 @@
 /* Общие стили */
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     background: linear-gradient(to bottom, #ff6f00, #e65100, #212121);
     background-attachment: fixed;
     color: #333;
@@ -655,7 +655,7 @@ body {
 
     /* Снежинки */
     #snowflakes {
-        display: none; /* Отключаем, если они мешают видимости */
+        display: none; 
     }
 
     /* Модальное окно */
@@ -663,4 +663,14 @@ body {
         width: 90%;
         margin: 0 auto;
     }
+      /* Социальные ссылки */
+  .social-links {
+    gap: 10px;
+}
+
+.social-links a img {
+    width: 25px; /* Уменьшим иконки */
+    height: 25px;
+}
+
 }

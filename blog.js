@@ -1,4 +1,4 @@
-
+// Анимация снежинок
 document.addEventListener('DOMContentLoaded', () => {
     const snowContainer = document.getElementById('snowflakes');
     const snowflakeCount = 50; 
@@ -18,13 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
   
-// Количество лампочек, которые мы хотим создать
-const numberOfLights = 40;
+// Гирлянда
+const numberOfLights = 40; // Количество лампочек 
 
-// Ссылка на контейнер для гирлянды
 const lightrope = document.getElementById('lightrope');
 
-// Создаем лампочки и добавляем их в контейнер
 for (let i = 0; i < numberOfLights; i++) {
   const light = document.createElement('li');
   lightrope.appendChild(light);

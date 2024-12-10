@@ -1,4 +1,4 @@
-
+// Модальное окно 
 const updateBlock = document.getElementById('update-block');
 const modal = document.getElementById('modal');
 const closeBtn = document.getElementById('close-btn');
@@ -18,7 +18,7 @@ window.addEventListener('click', function(event) {
   }
 });
 
-
+// Анимация снежинок
   document.addEventListener('DOMContentLoaded', () => {
     const snowContainer = document.getElementById('snowflakes');
     const snowflakeCount = 50; 
