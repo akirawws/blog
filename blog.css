@@ -592,17 +592,22 @@ body {
 
 /* Основной медиа-запрос для телефонов */
 @media (max-width: 768px) {
+      /* Общие стили */
+    body {
+    font-size: 16px; /* Увеличим шрифт для удобства чтения */
+    }
+
     /* Общий контейнер */
     .outer-wrapper {
         padding: 10px;
     }
 
-    /* Шапка сайта */
-    .header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+  /* Шапка сайта */
+  .header {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
 
     .logo {
         font-size: 20px;
@@ -641,7 +646,11 @@ body {
 
     /* Гирлянда */
     .lightrope {
-        display: none; /* Можно скрыть, если не вмещается */
+        top: 10px;
+    }
+    .lightrope li {
+        width: 10px;
+        height: 20px;
     }
 
     /* Снежинки */

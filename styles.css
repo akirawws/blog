@@ -428,7 +428,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     position: absolute;
-    top: 20px; /* Отступ от верха */
+    top: 20px; 
     left: 0;
     z-index: 1;
     margin: -15px 0 0 0;
@@ -449,7 +449,7 @@ body {
     height: 28px;
     border-radius: 50%;
     margin: 20px;
-    background: #00f7a5; /* Зеленый */
+    background: #00f7a5;
     box-shadow: 0px 4.66667px 24px 3px #00f7a5;
     animation-name: flash-1;
     animation-duration: 2s;
@@ -457,28 +457,28 @@ body {
   }
   
   .lightrope li:nth-child(2n) {
-    background: #0077ff; /* Синий */
+    background: #0077ff;
     box-shadow: 0px 4.66667px 24px 3px rgba(0, 119, 255, 0.5);
     animation-name: flash-2;
     animation-duration: 1s;
   }
   
   .lightrope li:nth-child(3n) {
-    background: #f70094; /* Розовый */
+    background: #f70094; 
     box-shadow: 0px 4.66667px 24px 3px #f70094;
     animation-name: flash-3;
     animation-duration: 1.5s;
   }
   
   .lightrope li:nth-child(4n) {
-    background: #f7c700; /* Желтый */
+    background: #f7c700; 
     box-shadow: 0px 4.66667px 24px 3px #f7c700;
     animation-name: flash-4;
     animation-duration: 1.3s;
   }
   
   .lightrope li:nth-child(5n) {
-    background: #ff7f00; /* Оранжевый */
+    background: #ff7f00; 
     box-shadow: 0px 4.66667px 24px 3px #ff7f00;
     animation-name: flash-5;
     animation-duration: 1.8s;
