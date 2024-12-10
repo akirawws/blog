@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    opacity: 1; /* Скрыт по умолчанию */
+    opacity: 1; 
 }
 
 /* Прочие стили для основного контента */
@@ -195,25 +195,25 @@ body {
 /* Стили для блоков "Информация" и "Опыт" */
 .about-block {
     flex: 1;
-    background-color: #333; /* Темный фон */
-    color: white; /* Белый текст */
+    background-color: #333; 
+    color: white; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавная анимация */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
     user-select: none;
     cursor: default;
 }
 
 /* Эффект при наведении на блок */
 .about-block:hover {
-    transform: translateY(-10px); /* Сдвиг вверх */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Более сильная тень */
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 /* Заголовки в блоках */
 .about-block h3 {
-    color: #ff8c00; /* Оранжевый цвет заголовков */
+    color: #ff8c00; 
     margin-bottom: 10px;
 }
 
@@ -228,15 +228,15 @@ body {
 }
 
 .about-block li::before {
-    content: "•"; /* Пулевый маркер */
-    color: #ff8c00; /* Оранжевый цвет для маркера */
+    content: "•"; 
+    color: #ff8c00; 
     margin-right: 10px;
 }
 
 /* Добавим оранжевый цвет для слов "Blog" и "Project" */
 .about-block li a {
-    color: #ff8c00; /* Оранжевый цвет */
-    font-weight: bold; /* Жирный шрифт */
+    color: #ff8c00; 
+    font-weight: bold; 
     text-decoration: none;
 }
 
@@ -395,28 +395,28 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Снежинки не мешают взаимодействию с сайтом */
+    pointer-events: none; 
     overflow: hidden;
-    z-index: 1000; /* Убедитесь, что снежинки поверх всего контента */
+    z-index: 1000; 
   }
   
   /* Стили для каждой снежинки */
   .snowflake {
     position: absolute;
-    top: -50px; /* Снежинка появляется за верхним краем экрана */
-    color: white; /* Белый цвет для снежинок */
-    font-size: 1em; /* Базовый размер */
-    opacity: 0.8; /* Прозрачность */
-    animation: fall linear infinite; /* Анимация падения */
+    top: -50px; 
+    color: white; 
+    font-size: 1em; 
+    opacity: 0.8; 
+    animation: fall linear infinite;
   }
   
   /* Анимация падения */
   @keyframes fall {
     0% {
-      transform: translateY(0) translateX(0); /* Начальная позиция */
+      transform: translateY(0) translateX(0);
     }
     100% {
-      transform: translateY(100vh) translateX(calc(100vw * var(--horizontal-shift))); /* Падение вниз с отклонением */
+      transform: translateY(100vh) translateX(calc(100vw * var(--horizontal-shift))); 
     }
   }
    
@@ -582,7 +582,7 @@ body {
 @media screen and (max-width: 768px) {
   /* Общие стили */
   body {
-      font-size: 16px; /* Увеличим шрифт для удобства чтения */
+      font-size: 16px; 
   }
 
   /* Внешняя рамка */
@@ -614,14 +614,14 @@ body {
 
   /* Баннер и аватар */
   .banner {
-      height: 200px; /* Уменьшим высоту баннера */
+      height: 200px; 
   }
 
   .avatar {
       width: 100px; 
       height: 100px;
-      bottom: -40px; /* Скорректируем отступ */
-      left: calc(50% - 50px); /* Центрируем аватар */
+      bottom: -40px; 
+      left: calc(50% - 50px); 
   }
 
   /* Блок "Обо мне" */
@@ -630,17 +630,17 @@ body {
   }
 
   .about-text {
-      flex-direction: column; /* Перестраиваем блоки вертикально */
+      flex-direction: column; 
       gap: 15px;
   }
 
   .about-block {
-      padding: 15px; /* Уменьшим отступы */
+      padding: 15px; 
   }
 
   /* Модальное окно */
   .modal-content {
-      width: 90%; /* Уменьшим ширину */
+      width: 90%; 
   }
 
   /* Социальные ссылки */
@@ -649,18 +649,18 @@ body {
   }
 
   .social-links a img {
-      width: 25px; /* Уменьшим иконки */
+      width: 25px; 
       height: 25px;
   }
 
   /* Контактная информация */
   .developer-info p {
-      font-size: 0.8em; /* Уменьшим размер текста */
+      font-size: 0.8em;
   }
 
   /* Гирлянда */
   .lightrope {
-      top: 10px; /* Уменьшим отступ сверху */
+      top: 10px;
   }
 
   .lightrope li {

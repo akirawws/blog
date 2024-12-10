@@ -6,6 +6,7 @@ body {
     background-attachment: fixed;
     color: #333;
     height: 100%;
+    overflow: auto;
 }
 
 /* Когда загрузка завершена */
@@ -17,7 +18,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    opacity: 1; /* Скрыт по умолчанию */
+    opacity: 1; 
 }
 
 /* Прочие стили для основного контента */
@@ -55,16 +56,16 @@ body {
 /* Выделение активной ссылки */
 .nav a.active {
     font-weight: 600;
-    color: #ff6f00; /* Оранжевый цвет для выделения */
-    text-decoration: underline; /* Подчеркнутая активная ссылка */
-    transform: scale(1.1); /* Увеличение масштаба */
+    color: #ff6f00; 
+    text-decoration: underline; 
+    transform: scale(1.1); 
 }
 
 /* Эффект при наведении на ссылку */
 .nav a:hover {
-    color: #ff6f00; /* Цвет при наведении */
+    color: #ff6f00; 
     text-decoration: underline;
-    transform: scale(1.05); /* Немного увеличиваем при наведении */
+    transform: scale(1.05);
 }
 
 .nav .divider {
@@ -129,28 +130,28 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Снежинки не мешают взаимодействию с сайтом */
+    pointer-events: none; 
     overflow: hidden;
-    z-index: 1000; /* Убедитесь, что снежинки поверх всего контента */
+    z-index: 1000; 
   }
   
   /* Стили для каждой снежинки */
   .snowflake {
     position: absolute;
-    top: -50px; /* Снежинка появляется за верхним краем экрана */
-    color: white; /* Белый цвет для снежинок */
-    font-size: 1em; /* Базовый размер */
-    opacity: 0.8; /* Прозрачность */
-    animation: fall linear infinite; /* Анимация падения */
+    top: -50px; 
+    color: white; 
+    font-size: 1em; 
+    opacity: 0.8; 
+    animation: fall linear infinite; 
   }
   
   /* Анимация падения */
   @keyframes fall {
     0% {
-      transform: translateY(0) translateX(0); /* Начальная позиция */
+      transform: translateY(0) translateX(0); 
     }
     100% {
-      transform: translateY(100vh) translateX(calc(100vw * var(--horizontal-shift))); /* Падение вниз с отклонением */
+      transform: translateY(100vh) translateX(calc(100vw * var(--horizontal-shift))); 
     }
   }
    
@@ -162,7 +163,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     position: absolute;
-    top: 20px; /* Отступ от верха */
+    top: 20px; 
     left: 0;
     z-index: 1;
     margin: -15px 0 0 0;
@@ -316,7 +317,7 @@ body {
 @media screen and (max-width: 768px) {
   /* Общие стили */
   body {
-      font-size: 16px; /* Увеличим шрифт для удобства чтения */
+      font-size: 16px; 
   }
 
   /* Внешняя рамка */
@@ -348,14 +349,14 @@ body {
 
   /* Баннер и аватар */
   .banner {
-      height: 200px; /* Уменьшим высоту баннера */
+      height: 200px; 
   }
 
   .avatar {
       width: 100px; 
       height: 100px;
-      bottom: -40px; /* Скорректируем отступ */
-      left: calc(50% - 50px); /* Центрируем аватар */
+      bottom: -40px; 
+      left: calc(50% - 50px); 
   }
 
   /* Блок "Обо мне" */
@@ -364,17 +365,17 @@ body {
   }
 
   .about-text {
-      flex-direction: column; /* Перестраиваем блоки вертикально */
+      flex-direction: column; 
       gap: 15px;
   }
 
   .about-block {
-      padding: 15px; /* Уменьшим отступы */
+      padding: 15px; 
   }
 
   /* Модальное окно */
   .modal-content {
-      width: 90%; /* Уменьшим ширину */
+      width: 90%; 
   }
 
   /* Социальные ссылки */
@@ -383,18 +384,18 @@ body {
   }
 
   .social-links a img {
-      width: 25px; /* Уменьшим иконки */
+      width: 25px; 
       height: 25px;
   }
 
   /* Контактная информация */
   .developer-info p {
-      font-size: 0.8em; /* Уменьшим размер текста */
+      font-size: 0.8em; 
   }
 
   /* Гирлянда */
   .lightrope {
-      top: 10px; /* Уменьшим отступ сверху */
+      top: 10px; 
   }
 
   .lightrope li {
@@ -422,33 +423,35 @@ body {
     border-radius: 8px;
     width: 100%;
     max-width: 800px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
     display: flex;
-    gap: 20px; /* Отступ между датой и контентом */
-    flex-direction: row;  /* Дата и контент в строку */
-    align-items: flex-start;  /* Выравнивание по верхнему краю */
+    gap: 20px; 
+    flex-direction: row;  
+    align-items: flex-start; 
+    
 }
 
 /* Эффект при наведении на блог */
 .blog-item:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
 /* Контейнер с датой и годом */
 .blog-date-container {
     display: flex;
-    flex-direction: column;  /* Дата и год располагаются по вертикали */
+    flex-direction: column;  
     align-items: flex-start;
-    gap: 5px; /* Отступ между датой и годом */
-    width: 120px;  /* Увеличиваем ширину контейнера с датой */
+    gap: 5px; 
+    width: 120px; 
 }
 
 /* Стиль для даты */
 .blog-date {
     color: #000;
     font-weight: bold;
-    font-size: 2em; /* Увеличиваем размер шрифта для даты */
+    font-size: 2em; 
 }
 
 /* Стиль для года */
@@ -461,8 +464,8 @@ body {
 /* Контейнер для заголовка и текста */
 .blog-content {
     display: flex;
-    flex-direction: column; /* Заголовок и текст будут вертикально */
-    width: 100%;  /* Контент будет занимать оставшееся пространство */
+    flex-direction: column;
+    width: 100%;  
 }
 
 /* Заголовок блога */
@@ -477,13 +480,13 @@ body {
     color: #555;
     font-size: 1.2em;
     margin-top: 10px;
-    max-width: 100%; /* Оставляем описание на всю ширину */
+    max-width: 100%; 
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Показываем только 2 строки */
-    line-clamp: 2; /* Стандартное свойство для совместимости */
+    -webkit-line-clamp: 2; 
+    line-clamp: 2; 
     -webkit-box-orient: vertical;
-    overflow: hidden; /* Скрываем текст, который выходит за пределы */
-    text-overflow: ellipsis; /* Добавляем троеточие в конце */
+    overflow: hidden; 
+    text-overflow: ellipsis; 
 
 }
 
@@ -491,7 +494,7 @@ body {
 
 /* Стили для модального окна */
 .modal {
-    display: none; /* Скрыто по умолчанию */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -500,6 +503,7 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     padding-top: 60px;
+    z-index: 1000; 
 }
 
 .modal-content {
@@ -510,9 +514,10 @@ body {
     width: 80%;
     max-width: 900px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-height: 80vh;  /* Ограничиваем высоту окна */
-    overflow-y: auto;  /* Добавляем прокрутку по вертикали */
+    max-height: 80vh;  
+    overflow-y: auto;  
 }
+
 
 .close-modal {
     color: #aaa;
@@ -594,7 +599,7 @@ body {
 @media (max-width: 768px) {
       /* Общие стили */
     body {
-    font-size: 16px; /* Увеличим шрифт для удобства чтения */
+    font-size: 16px; 
     }
 
     /* Общий контейнер */
@@ -615,13 +620,15 @@ body {
 
     .nav {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
     }
-
-    .nav .divider {
-        display: none; /* Убираем разделители */
+  
+    .nav a {
+        font-size: 0.9em;
     }
+  
 
     /* Блог */
     .blog-item {
@@ -669,8 +676,31 @@ body {
 }
 
 .social-links a img {
-    width: 25px; /* Уменьшим иконки */
+    width: 25px; 
     height: 25px;
 }
 
+}
+
+.tags {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.tag {
+    display: inline-block;
+    background-color: white;
+    color: #e65100;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.tag:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
 }
