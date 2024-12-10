@@ -55,3 +55,23 @@ document.querySelector('.menu-toggle').addEventListener('click', function () {
   this.classList.toggle('active');
   document.querySelector('.nav').classList.toggle('open');
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Получаем текущий URL
+  const currentUrl = window.location.pathname;
+
+  // Получаем все ссылки навигации
+  const links = document.querySelectorAll('.nav a');
+
+  // Проходим по всем ссылкам и добавляем класс active для нужной
+  links.forEach(link => {
+      // Получаем href каждой ссылки
+      const linkHref = link.getAttribute('href');
+      
+      // Проверяем, если мы на главной странице (путь "/")
+      if ((currentUrl === '/' && linkHref === 'index.html') || currentUrl.includes(linkHref)) {
+          link.classList.add('active');
+      }
+  });
+});
