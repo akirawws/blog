@@ -596,10 +596,10 @@ body {
 }
 
 /* Основной медиа-запрос для телефонов */
-@media (max-width: 768px) {
-      /* Общие стили */
+@media screen and (max-width: 768px) {
+    /* Общие стили */
     body {
-    font-size: 16px; 
+        font-size: 16px; 
     }
 
     /* Общий контейнер */
@@ -607,15 +607,15 @@ body {
         padding: 10px;
     }
 
-  /* Шапка сайта */
-  .header {
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
-  }
+    /* Шапка сайта */
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
 
     .logo {
-        font-size: 20px;
+        font-size: 1.2em;
     }
 
     .nav {
@@ -624,11 +624,10 @@ body {
         justify-content: center;
         gap: 10px;
     }
-  
+
     .nav a {
         font-size: 0.9em;
     }
-  
 
     /* Блог */
     .blog-item {
@@ -655,6 +654,7 @@ body {
     .lightrope {
         top: 10px;
     }
+
     .lightrope li {
         width: 10px;
         height: 20px;
@@ -670,17 +670,18 @@ body {
         width: 90%;
         margin: 0 auto;
     }
-      /* Социальные ссылки */
-  .social-links {
-    gap: 10px;
+
+    /* Социальные ссылки */
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links a img {
+        width: 25px;
+        height: 25px;
+    }
 }
 
-.social-links a img {
-    width: 25px; 
-    height: 25px;
-}
-
-}
 
 .tags {
     margin-top: 10px;
