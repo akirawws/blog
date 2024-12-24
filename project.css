@@ -1,0 +1,547 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(to bottom, #ff6f00, #e65100, #212121);
+    background-attachment: fixed;
+    color: #333;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Когда загрузка завершена */
+.outer-wrapper {
+    animation: none;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 1; 
+}
+
+/* Прочие стили для основного контента */
+.outer-wrapper {
+    margin: 20px auto;
+    max-width: 95%; 
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Шапка сайта */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ff8c00;
+    width: 97.70%;
+}
+
+
+/* Стили для ссылок */
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    margin: 0 15px;
+    font-weight: 400;
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Выделение активной ссылки */
+.nav a.active {
+    font-weight: 600;
+    color: #ff6f00; 
+    text-decoration: underline; 
+    transform: scale(1.1); 
+}
+
+/* Эффект при наведении на ссылку */
+.nav a:hover {
+    color: #ff6f00; 
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+.nav .divider {
+    color: #ff8c00;
+}
+
+
+
+/* Логотип */
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    position: relative;
+}
+
+.logo .circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ff8c00;
+    border-radius: 50%;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* Контактная информация */
+.contact-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-links a img {
+    width: 30px;
+    height: 30px;
+}
+
+.developer-info p {
+    margin: 5px 0;
+}
+
+.developer-info .role {
+    font-size: 0.9em;  
+    color: #555;
+}
+
+.developer-info .skills {
+    font-size: 0.9em; 
+    color: #777;
+}
+
+/* Контейнер для снежинок */
+#snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    overflow: hidden;
+    z-index: 1000; 
+  }
+  
+  /* Стили для каждой снежинки */
+  .snowflake {
+    position: absolute;
+    top: -50px; 
+    color: white; 
+    font-size: 1em; 
+    opacity: 0.8; 
+    animation: fall linear infinite; 
+  }
+  
+  /* Анимация падения */
+  @keyframes fall {
+    0% {
+      transform: translateY(0) translateX(0); 
+    }
+    100% {
+      transform: translateY(100vh) translateX(calc(100vw * var(--horizontal-shift))); 
+    }
+  }
+   
+
+    /* Гирлянда */
+    
+  .lightrope {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    top: 20px; 
+    left: 0;
+    z-index: 1;
+    margin: -15px 0 0 0;
+    padding: 0;
+    pointer-events: none;
+    width: 100%;
+  }
+  
+  .lightrope li {
+    position: relative;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 12px;
+    height: 28px;
+    border-radius: 50%;
+    margin: 20px;
+    background: #00f7a5; /* Зеленый */
+    box-shadow: 0px 4.66667px 24px 3px #00f7a5;
+    animation-name: flash-1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .lightrope li:nth-child(2n) {
+    background: #0077ff; /* Синий */
+    box-shadow: 0px 4.66667px 24px 3px rgba(0, 119, 255, 0.5);
+    animation-name: flash-2;
+    animation-duration: 1s;
+  }
+  
+  .lightrope li:nth-child(3n) {
+    background: #f70094; /* Розовый */
+    box-shadow: 0px 4.66667px 24px 3px #f70094;
+    animation-name: flash-3;
+    animation-duration: 1.5s;
+  }
+  
+  .lightrope li:nth-child(4n) {
+    background: #f7c700; /* Желтый */
+    box-shadow: 0px 4.66667px 24px 3px #f7c700;
+    animation-name: flash-4;
+    animation-duration: 1.3s;
+  }
+  
+  .lightrope li:nth-child(5n) {
+    background: #ff7f00; /* Оранжевый */
+    box-shadow: 0px 4.66667px 24px 3px #ff7f00;
+    animation-name: flash-5;
+    animation-duration: 1.8s;
+  }
+  
+  /* Провод, соединяющий лампочки */
+  .lightrope li:before {
+    content: "";
+    position: absolute;
+    background: #222;
+    width: 10px;
+    height: 9.33333px;
+    border-radius: 3px;
+    top: -4.66667px;
+    left: 1px;
+  }
+  
+  /* Хвостики лампочек */
+  .lightrope li:after {
+    content: "";
+    top: -14px;
+    left: 9px;
+    position: absolute;
+    width: 52px;
+    height: 18.66667px;
+    border-bottom: solid #222 2px;
+    border-radius: 50%;
+  }
+  
+  .lightrope li:last-child:after {
+    content: none;
+  }
+  
+  .lightrope li:first-child {
+    margin-left: -40px;
+  }
+  
+  /* Анимации для каждой лампочки */
+  
+  /* Мигание первой лампочки (Зеленый) */
+  @keyframes flash-1 {
+    0%, 100% {
+      background: #00f7a5;
+      box-shadow: 0px 4.66667px 24px 3px #00f7a5;
+    }
+    50% {
+      background: rgba(0, 247, 165, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(0, 247, 165, 0.2);
+    }
+  }
+  
+  /* Мигание второй лампочки (Синий) */
+  @keyframes flash-2 {
+    0%, 100% {
+      background: #0077ff;
+      box-shadow: 0px 4.66667px 24px 3px rgba(0, 119, 255, 0.5);
+    }
+    50% {
+      background: rgba(0, 119, 255, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(0, 119, 255, 0.2);
+    }
+  }
+  
+  /* Мигание третьей лампочки (Розовый) */
+  @keyframes flash-3 {
+    0%, 100% {
+      background: #f70094;
+      box-shadow: 0px 4.66667px 24px 3px #f70094;
+    }
+    50% {
+      background: rgba(247, 0, 148, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(247, 0, 148, 0.2);
+    }
+  }
+  
+  /* Мигание четвертой лампочки (Желтый) */
+  @keyframes flash-4 {
+    0%, 100% {
+      background: #f7c700;
+      box-shadow: 0px 4.66667px 24px 3px #f7c700;
+    }
+    50% {
+      background: rgba(247, 199, 0, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(247, 199, 0, 0.2);
+    }
+  }
+  
+  /* Мигание пятой лампочки (Оранжевый) */
+  @keyframes flash-5 {
+    0%, 100% {
+      background: #ff7f00;
+      box-shadow: 0px 4.66667px 24px 3px #ff7f00;
+    }
+    50% {
+      background: rgba(255, 127, 0, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(255, 127, 0, 0.2);
+    }
+  }
+  
+/* Медиазапрос для телефонов */
+@media screen and (max-width: 768px) {
+  /* Общие стили */
+  body {
+      font-size: 16px; 
+  }
+
+  /* Внешняя рамка */
+  .outer-wrapper {
+      padding: 10px;
+  }
+
+  /* Шапка сайта */
+  .header {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .logo {
+      font-size: 1.2em;
+  }
+
+  .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+  }
+
+  .nav a {
+      font-size: 0.9em;
+  }
+
+  /* Баннер и аватар */
+  .banner {
+      height: 200px; 
+  }
+
+  .avatar {
+      width: 100px; 
+      height: 100px;
+      bottom: -40px; 
+      left: calc(50% - 50px); 
+  }
+
+  /* Блок "Обо мне" */
+  .about-me {
+      padding: 60px 10px 10px;
+  }
+
+  .about-text {
+      flex-direction: column; 
+      gap: 15px;
+  }
+
+  .about-block {
+      padding: 15px; 
+  }
+
+  /* Модальное окно */
+  .modal-content {
+      width: 90%; 
+  }
+
+  /* Социальные ссылки */
+  .social-links {
+      gap: 10px;
+  }
+
+  .social-links a img {
+      width: 25px; 
+      height: 25px;
+  }
+
+  /* Контактная информация */
+  .developer-info p {
+      font-size: 0.8em; 
+  }
+
+  /* Гирлянда */
+  .lightrope {
+      top: 10px; 
+  }
+
+  .lightrope li {
+      width: 10px;
+      height: 20px;
+  }
+}
+
+
+
+
+
+
+/* Стили для блоков проектов */
+.project-item {
+  cursor: pointer; /* Показывает, что блок кликабелен */
+  background-color: #f9f9f9;
+  border: 2px solid transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project-item:hover {
+  background-color: #f0f8ff; /* Светло-голубой фон при наведении */
+  border-color: #007bff; /* Голубая рамка */
+  transform: translateY(-5px); /* Поднимаем блок чуть выше */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Усиливаем тень */
+}
+
+.project-item h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.project-item p {
+  color: #666;
+  margin: 10px 0 0;
+}
+
+.project-item:hover h2 {
+  color: #007bff; /* Изменение цвета заголовка при наведении */
+}
+
+
+/* Разделитель с линиями и кругом */
+.divider-with-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 40px; /* Высота разделителя */
+    margin: 20px 0; /* Расстояние между проектами */
+}
+
+/* Линии по краям круга */
+.divider-with-circle .line {
+    flex-grow: 1;
+    height: 4px; /* Толщина линий */
+    background-color: #ccc; /* Цвет линий */
+    border-radius: 2px; /* Закругление концов линий */
+}
+
+/* Круг между линиями */
+.divider-with-circle .circle {
+    width: 30px;
+    height: 30px;
+    background-color: #ff8c00; /* Оранжевый цвет */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px; /* Расстояние от линий до круга */
+    z-index: 1;
+}
+
+/* Сердечко в центре круга */
+.divider-with-circle .circle .heart {
+    font-size: 1em;
+    color: white; /* Белый цвет сердечка */
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px) {
+    .projects-intro {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .projects-list {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .project-item {
+        padding-left: 30px;
+    }
+}
+
+/* Модальное окно */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Контент модального окна */
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Кнопка закрытия */
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+

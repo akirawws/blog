@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Developer Blog.">
+    <meta name="google-site-verification" content="mvSaSSg-czSI2UwNnqED1qtFINTfYnkgof5vP3ok1i4" />
+    <title>Akirawws - Projects</title>
+    <link rel="stylesheet" href="project.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+</head>
+<body>
+  <!-- Внешняя рамка -->
+  <div class="outer-wrapper">
+    <!-- Шапка сайта -->
+    <header class="header">
+      <ul class="lightrope" id="lightrope"></ul>
+      <div class="logo">
+        AKIRA-PROJECT<span class="circle"></span>
+      </div> 
+      <nav class="nav">
+        <a href="main.html" id="home">Home</a>
+        <span class="divider">|</span>
+        <a href="blog.html" id="blog">Blog</a>
+        <span class="divider">|</span>
+        <a href="project.html" id="projects" class="active">Projects</a>
+    </nav>
+    </header>
+
+    <div id="snowflakes"></div>
+
+        <!-- Main Content -->
+        <section class="projects-intro">
+            <div class="info-container">
+                <h1>Мои проекты</h1>
+                <p>На данной странице Вы можете подробно рассмотреть проекты сделанные мной в процессе обучения.</p>
+            </div>
+        </section>
+
+        <!-- Projects List -->
+<!-- Projects List -->
+<section class="projects-list">
+    <div class="project-list">
+        <!-- Проект 1 -->
+        <div class="project-item" data-project="voltus-bot">
+            <h2>Voltus Bot</h2>
+            <p>Нажмите, чтобы узнать подробнее</p>
+        </div>
+        <div class="divider-with-circle">
+            <div class="line"></div>
+            <div class="circle">
+                <div class="heart">❤</div>
+            </div>
+            <div class="line"></div>
+        </div>
+        
+        <!-- Проект 2 -->
+        <div class="project-item" data-project="project-2">
+            <h2>Euphoria Bot</h2>
+            <p>Нажмите, чтобы узнать подробнее</p>
+        </div>
+        <div class="divider-with-circle">
+            <div class="line"></div>
+            <div class="circle">
+                <div class="heart">❤</div>
+            </div>
+            <div class="line"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Модальное окно -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+            
+        </section>
+
+                <!-- Контактная информация (под обновлениями) -->
+                <div class="contact-info">
+                    <div class="social-links">
+                      <a href="https://t.me/ak1rrawws" target="_blank">
+                        <img src="assets/telegram.png" alt="Telegram">
+                      </a>
+                      <a href="https://discord.com/users/akirawws" target="_blank">
+                        <img src="assets/discord.png" alt="Discord">
+                      </a>
+                      <a href="https://github.com/akirawws" target="_blank">
+                        <img src="assets/github.png" alt="GitHub">
+                      </a>
+                    </div>
+                    <div class="developer-info">
+                      <p class="role">Developer</p>
+                      <p class="skills">Python / HTML / CSS / Javascript / C#</p>
+                    </div>
+                  </div>
+        
+    </div>
+    <script src="project.js"></script>
+</body>
+</html>

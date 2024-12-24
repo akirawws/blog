@@ -1,0 +1,670 @@
+/* Общие стили */
+body {
+    margin: 0;
+   font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(to bottom, #ff6f00, #e65100, #212121);
+    background-attachment: fixed;
+    color: #333;
+    height: 100%;
+}
+
+/* Когда загрузка завершена */
+.outer-wrapper {
+    animation: none;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    opacity: 1; 
+}
+
+/* Прочие стили для основного контента */
+.outer-wrapper {
+    margin: 20px auto;
+    max-width: 95%; 
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Шапка сайта */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #ff8c00;
+    width: 97.70%;
+}
+
+/* Логотип */
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    position: relative;
+}
+
+.logo .circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ff8c00;
+    border-radius: 50%;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* Стили для ссылок */
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    margin: 0 15px;
+    font-weight: 400;
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Выделение активной ссылки */
+.nav a.active {
+    font-weight: 600;
+    color: #ff6f00;
+    text-decoration: underline;
+    transform: scale(1.1); 
+}
+
+/* Эффект при наведении на ссылку */
+.nav a:hover {
+    color: #ff6f00;
+    text-decoration: underline;
+    transform: scale(1.05); 
+}
+
+.nav .divider {
+    color: #ff8c00;
+}
+
+
+
+/* Баннер и аватар */
+.banner-avatar {
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    image-rendering: crisp-edges;
+}
+
+.avatar {
+    position: absolute;
+    bottom: -60px;
+    left: 20px;
+    width: 150px; 
+    height: 150px;
+    border: 4px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Блок "Обо мне" */
+.about-me {
+    padding: 80px 20px 20px;
+    text-align: center;
+}
+
+/* Приветствие */
+.greeting {
+    display: inline-block;
+    font-size: 1.5em;
+    background-color: #ff8c00;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.about-me h1 {
+    font-size: 2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-me .amp {
+    color: #ff8c00;
+}
+
+/* Блок обновлений */
+.update-block {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+    cursor: default; 
+}
+
+/* Эффект при наведении */
+.update-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Оранжевый цвет для заголовка */
+.update-block h3 {
+    color: #ff8c00;
+    margin-bottom: 10px;
+}
+
+.update-block ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.update-block li {
+    margin-bottom: 8px;
+}
+
+.update-block li span {
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+/* Блоки текста */
+.about-text {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Стили для блоков "Информация" и "Опыт" */
+.about-block {
+    flex: 1;
+    background-color: #333; 
+    color: white; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    user-select: none;
+    cursor: default;
+}
+
+/* Эффект при наведении на блок */
+.about-block:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+/* Заголовки в блоках */
+.about-block h3 {
+    color: #ff8c00; 
+    margin-bottom: 10px;
+}
+
+/* Стили для списков в блоках */
+.about-block ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-block li {
+    margin-bottom: 8px;
+}
+
+.about-block li::before {
+    content: "•"; 
+    color: #ff8c00; 
+    margin-right: 10px;
+}
+
+/* Добавим оранжевый цвет для слов "Blog" и "Project" */
+.about-block li a {
+    color: #ff8c00; 
+    font-weight: bold; 
+    text-decoration: none;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+/* Содержимое модального окна */
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Кнопка закрытия */
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Заголовок модального окна */
+.modal-title {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Блоки обновлений */
+.update-detail {
+    margin-bottom: 20px;
+}
+
+/* Заголовок каждого обновления */
+.update-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Дата обновления */
+.update-date {
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+/* Описание обновления */
+.update-description {
+    font-size: 1em;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Разделительная линия между обновлениями */
+.update-divider {
+    margin-top: 20px;
+    border: 1px solid #ff8c00;
+}
+
+/* Стилизация блоков обновлений */
+.update-block {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+    cursor: default;
+}
+
+/* Эффект при наведении на блок обновлений */
+.update-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.update-block h3 {
+    color: #ff8c00;
+    margin-bottom: 10px;
+}
+
+.update-block ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.update-block li {
+    margin-bottom: 8px;
+}
+
+.update-block li span {
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+
+/* Контактная информация */
+.contact-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-links a img {
+    width: 30px;
+    height: 30px;
+}
+
+.developer-info p {
+    margin: 5px 0;
+}
+
+.developer-info .role {
+    font-size: 0.9em;  
+    color: #555;
+}
+
+.developer-info .skills {
+    font-size: 0.9em; 
+    color: #777;
+}
+
+/* Контейнер для снежинок */
+#snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+    overflow: hidden;
+    z-index: 1000; 
+  }
+  
+  /* Стили для каждой снежинки */
+  .snowflake {
+    position: absolute;
+    top: -50px; 
+    color: white; 
+    font-size: 1em; 
+    opacity: 0.8; 
+    animation: fall linear infinite;
+  }
+  
+  /* Анимация падения */
+  @keyframes fall {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    100% {
+      transform: translateY(100vh) translateX(calc(100vw * var(--horizontal-shift))); 
+    }
+  }
+   
+
+    /* Гирлянда */
+    
+  .lightrope {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    top: 20px; 
+    left: 0;
+    z-index: 1;
+    margin: -15px 0 0 0;
+    padding: 0;
+    pointer-events: none;
+    width: 100%;
+  }
+  
+  .lightrope li {
+    position: relative;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 12px;
+    height: 28px;
+    border-radius: 50%;
+    margin: 20px;
+    background: #00f7a5;
+    box-shadow: 0px 4.66667px 24px 3px #00f7a5;
+    animation-name: flash-1;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .lightrope li:nth-child(2n) {
+    background: #0077ff;
+    box-shadow: 0px 4.66667px 24px 3px rgba(0, 119, 255, 0.5);
+    animation-name: flash-2;
+    animation-duration: 1s;
+  }
+  
+  .lightrope li:nth-child(3n) {
+    background: #f70094; 
+    box-shadow: 0px 4.66667px 24px 3px #f70094;
+    animation-name: flash-3;
+    animation-duration: 1.5s;
+  }
+  
+  .lightrope li:nth-child(4n) {
+    background: #f7c700; 
+    box-shadow: 0px 4.66667px 24px 3px #f7c700;
+    animation-name: flash-4;
+    animation-duration: 1.3s;
+  }
+  
+  .lightrope li:nth-child(5n) {
+    background: #ff7f00; 
+    box-shadow: 0px 4.66667px 24px 3px #ff7f00;
+    animation-name: flash-5;
+    animation-duration: 1.8s;
+  }
+  
+  /* Провод, соединяющий лампочки */
+  .lightrope li:before {
+    content: "";
+    position: absolute;
+    background: #222;
+    width: 10px;
+    height: 9.33333px;
+    border-radius: 3px;
+    top: -4.66667px;
+    left: 1px;
+  }
+  
+  /* Хвостики лампочек */
+  .lightrope li:after {
+    content: "";
+    top: -14px;
+    left: 9px;
+    position: absolute;
+    width: 52px;
+    height: 18.66667px;
+    border-bottom: solid #222 2px;
+    border-radius: 50%;
+  }
+  
+  .lightrope li:last-child:after {
+    content: none;
+  }
+  
+  .lightrope li:first-child {
+    margin-left: -40px;
+  }
+  
+  /* Анимации для каждой лампочки */
+  
+  /* Мигание первой лампочки (Зеленый) */
+  @keyframes flash-1 {
+    0%, 100% {
+      background: #00f7a5;
+      box-shadow: 0px 4.66667px 24px 3px #00f7a5;
+    }
+    50% {
+      background: rgba(0, 247, 165, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(0, 247, 165, 0.2);
+    }
+  }
+  
+  /* Мигание второй лампочки (Синий) */
+  @keyframes flash-2 {
+    0%, 100% {
+      background: #0077ff;
+      box-shadow: 0px 4.66667px 24px 3px rgba(0, 119, 255, 0.5);
+    }
+    50% {
+      background: rgba(0, 119, 255, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(0, 119, 255, 0.2);
+    }
+  }
+  
+  /* Мигание третьей лампочки (Розовый) */
+  @keyframes flash-3 {
+    0%, 100% {
+      background: #f70094;
+      box-shadow: 0px 4.66667px 24px 3px #f70094;
+    }
+    50% {
+      background: rgba(247, 0, 148, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(247, 0, 148, 0.2);
+    }
+  }
+  
+  /* Мигание четвертой лампочки (Желтый) */
+  @keyframes flash-4 {
+    0%, 100% {
+      background: #f7c700;
+      box-shadow: 0px 4.66667px 24px 3px #f7c700;
+    }
+    50% {
+      background: rgba(247, 199, 0, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(247, 199, 0, 0.2);
+    }
+  }
+  
+  /* Мигание пятой лампочки (Оранжевый) */
+  @keyframes flash-5 {
+    0%, 100% {
+      background: #ff7f00;
+      box-shadow: 0px 4.66667px 24px 3px #ff7f00;
+    }
+    50% {
+      background: rgba(255, 127, 0, 0.4);
+      box-shadow: 0px 4.66667px 24px 3px rgba(255, 127, 0, 0.2);
+    }
+  }
+  
+/* Медиазапрос для телефонов */
+@media screen and (max-width: 768px) {
+  /* Общие стили */
+  body {
+      font-size: 16px; 
+  }
+
+  /* Внешняя рамка */
+  .outer-wrapper {
+      padding: 10px;
+  }
+
+  /* Шапка сайта */
+  .header {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .logo {
+      font-size: 1.2em;
+  }
+
+  .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+  }
+
+  .nav a {
+      font-size: 0.9em;
+  }
+
+  /* Баннер и аватар */
+  .banner {
+      height: 200px; 
+  }
+
+  .avatar {
+      width: 100px; 
+      height: 100px;
+      bottom: -40px; 
+      left: calc(50% - 50px); 
+  }
+
+  /* Блок "Обо мне" */
+  .about-me {
+      padding: 60px 10px 10px;
+  }
+
+  .about-text {
+      flex-direction: column; 
+      gap: 15px;
+  }
+
+  .about-block {
+      padding: 15px; 
+  }
+
+  /* Модальное окно */
+  .modal-content {
+      width: 90%; 
+  }
+
+  /* Социальные ссылки */
+  .social-links {
+      gap: 10px;
+  }
+
+  .social-links a img {
+      width: 25px; 
+      height: 25px;
+  }
+
+  /* Контактная информация */
+  .developer-info p {
+      font-size: 0.8em;
+  }
+
+  /* Гирлянда */
+  .lightrope {
+      top: 10px;
+  }
+
+  .lightrope li {
+      width: 10px;
+      height: 20px;
+  }
+}
