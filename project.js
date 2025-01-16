@@ -28,32 +28,49 @@ for (let i = 0; i < numberOfLights; i++) {
   lightrope.appendChild(light);
 }
 
-// Получаем элементы
-const modal = document.getElementById("modal");
-const modalBody = document.getElementById("modal-body");
-const closeBtn = document.querySelector(".close");
 
-// Данные проектов
-const projectDetails = {
-};
 
-// Обработчик открытия модального окна
-document.querySelectorAll(".project-item").forEach(item => {
-    item.addEventListener("click", () => {
-        const projectKey = item.getAttribute("data-project");
-        modalBody.innerHTML = projectDetails[projectKey];
-        modal.style.display = "flex"; // Показываем модальное окно
+// Получаем все элементы блога
+const blogItems = document.querySelectorAll('.project-item');
+
+// Получаем модальное окно и элементы внутри него
+const modal = document.getElementById('modal');
+const closeModal = document.getElementById('closeModal');
+
+// Для каждого элемента блога добавляем обработчик события
+blogItems.forEach(item => {
+    item.addEventListener('click', function() {
+        // Заполняем модальное окно контентом выбранного блога
+        const title = item.querySelector('.project-title').textContent;
+        const date = item.querySelector('.project-date').textContent;
+        const year = item.querySelector('.project-year').textContent;
+
+        // Проверяем, есть ли у элемента секция blog-preview.full
+        const previewFull = item.querySelector('.project-preview.full');
+        const previewContent = previewFull 
+            ? previewFull.innerHTML // Если есть, берем содержимое .blog-preview.full
+            : item.querySelector('.project-preview').innerHTML; // Если нет, берем обычный .blog-preview
+
+        // Открываем модальное окно
+        modal.querySelector('.project-title').textContent = title;
+        modal.querySelector('.project-date').textContent = date;
+        modal.querySelector('.project-year').textContent = year;
+        modal.querySelector('.project-full-content').innerHTML = previewContent;
+
+        modal.style.display = 'block';
     });
 });
 
-// Обработчик закрытия модального окна
-closeBtn.addEventListener("click", () => {
-    modal.style.display = "none"; // Скрываем модальное окно
+// Закрытие модального окна
+closeModal.addEventListener('click', function() {
+    modal.style.display = 'none';
+    document.body.classList.remove('no-hover-animation');
+    document.body.classList.add('no-hover-animation');
 });
 
-// Закрытие модального окна при клике вне контента
-window.addEventListener("click", (event) => {
+// Закрытие модального окна при клике вне его
+window.addEventListener('click', function(event) {
     if (event.target === modal) {
-        modal.style.display = "none";
+        modal.style.display = 'none';
     }
 });
