@@ -581,7 +581,7 @@ body {
 @media (max-width: 768px) {
     /* Сделаем ширину модального окна на мобильных устройствах меньше */
     .modal-content {
-        width: 70%;
+        width: 90%;
         padding: 15px;
     }
 
@@ -590,6 +590,9 @@ body {
         font-size: 25px;
         top: 5px;
         right: 10px;
+    }
+    .blog-date {
+        display:none;
     }
 }
 
@@ -608,6 +611,9 @@ body {
         font-size: 22px;
         top: 5px;
         right: 5px;
+    }
+    .blog-date {
+        display:none;
     }
 }
 
