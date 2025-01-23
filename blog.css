@@ -583,14 +583,36 @@ body {
 }
 
 /* Адаптивные стили */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    /* Сделаем ширину модального окна на мобильных устройствах меньше */
     .modal-content {
         width: 90%;
         padding: 15px;
     }
-    
+
+    /* Сделаем кнопку закрытия немного меньше */
     .close-modal {
         font-size: 25px;
+        top: 5px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Сделаем модальное окно еще меньше на экранах меньше 480px */
+    .modal-content {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .modal {
+        padding-top: 40px; /* Уменьшаем отступ сверху */
+    }
+
+    .close-modal {
+        font-size: 22px;
+        top: 5px;
+        right: 5px;
     }
 }
 
