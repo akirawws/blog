@@ -57,18 +57,28 @@ blogItems.forEach(item => {
         modal.querySelector('.blog-year').textContent = year;
         modal.querySelector('.blog-full-content').innerHTML = previewContent;
 
-        modal.style.display = 'block';
+        // Добавляем класс show для показа модального окна
+        modal.classList.add('show');  // Обязательно добавляем класс 'show' для показа окна
+
+        // Блокируем прокрутку страницы
+        document.body.style.overflow = 'hidden';
     });
 });
 
 // Закрытие модального окна
 closeModal.addEventListener('click', function() {
-    modal.style.display = 'none';
+    modal.classList.remove('show');  // Убираем класс 'show' для скрытия окна
+
+    // Восстанавливаем прокрутку страницы
+    document.body.style.overflow = 'auto';
 });
 
 // Закрытие модального окна при клике вне его
 window.addEventListener('click', function(event) {
     if (event.target === modal) {
-        modal.style.display = 'none';
+        modal.classList.remove('show');  // Убираем класс 'show' для скрытия окна
+
+        // Восстанавливаем прокрутку страницы
+        document.body.style.overflow = 'auto';
     }
 });

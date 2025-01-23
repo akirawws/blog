@@ -490,22 +490,31 @@ body {
 
 }
 
-
-
-/* Стили для модального окна */
+/* Модальное окно */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон */
     padding-top: 60px;
-    z-index: 1000; 
+    overflow: hidden; /* Убираем прокрутку для всего модального окна */
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Когда модальное окно активно */
+.modal.show {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Контейнер с контентом внутри модального окна */
 .modal-content {
     background-color: #fff;
     margin: 5% auto;
@@ -515,10 +524,24 @@ body {
     max-width: 900px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-height: 80vh;  
-    overflow-y: auto;  
+    overflow: hidden; /* Убираем полосу прокрутки */
+    position: relative;
+    animation: fadeIn 0.5s ease-out; /* Плавное появление контента */
 }
 
+/* Анимация для появления контента */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+/* Кнопка закрытия модального окна */
 .close-modal {
     color: #aaa;
     font-size: 30px;
@@ -529,12 +552,48 @@ body {
     cursor: pointer;
 }
 
+/* При наведении на кнопку закрытия */
 .close-modal:hover,
 .close-modal:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Плавная прокрутка контента в модальном окне */
+.modal-content {
+    max-height: 70vh;
+    overflow-y: auto;  /* Прокрутка внутри модального окна, если контент слишком большой */
+    scrollbar-width: thin; /* Для Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1); /* Для Firefox */
+}
+
+/* Кастомизация прокрутки для Chrome, Safari и Edge */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    .close-modal {
+        font-size: 25px;
+    }
+}
+
 
 /* Стили для полного содержимого блога внутри модального окна */
 .blog-full-content {
