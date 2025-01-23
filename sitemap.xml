@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1">
-    <url>
-        <loc>https://akirawws.github.io/</loc>
-        <lastmod>2023-10-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://akirawws.github.io/web/</loc>
-        <lastmod>2023-10-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <!-- Добавьте другие URL здесь -->
-</urlset>
+   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1">
+       <url>
+           <loc>https://akirawws.ru/</loc>
+           <lastmod>2023-10-01</lastmod>
+           <changefreq>monthly</changefreq>
+           <priority>1.0</priority>
+       </url>
+       <url>
+           <loc>https://akirawws.ru/main.html</loc>
+           <lastmod>2023-10-01</lastmod>
+           <changefreq>monthly</changefreq>
+           <priority>0.8</priority>
+       </url>
+           <loc>https://akirawws.ru/blog.html</loc>
+           <lastmod>2023-10-01</lastmod>
+           <changefreq>monthly</changefreq>
+           <priority>0.8</priority>
+       </url>
+           <loc>https://akirawws.ru/project.html</loc>
+           <lastmod>2023-10-01</lastmod>
+           <changefreq>monthly</changefreq>
+           <priority>0.8</priority>
+       </url>
+   </urlset>
