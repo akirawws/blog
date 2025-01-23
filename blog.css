@@ -581,8 +581,9 @@ body {
 @media (max-width: 768px) {
     /* Сделаем ширину модального окна на мобильных устройствах меньше */
     .modal-content {
-        width: 90%;
+        width: 80%;
         padding: 15px;
+        font-size: 12px;
     }
 
     /* Сделаем кнопку закрытия немного меньше */
@@ -591,16 +592,14 @@ body {
         top: 5px;
         right: 10px;
     }
-    .blog-date {
-        display:none;
-    }
+
 }
 
 @media (max-width: 480px) {
     /* Сделаем модальное окно еще меньше на экранах меньше 480px */
     .modal-content {
-        width: 95%;
-        padding: 10px;
+        width: 70%;
+        padding: 50px;
     }
 
     .modal {
@@ -611,12 +610,6 @@ body {
         font-size: 22px;
         top: 5px;
         right: 5px;
-    }
-    .blog-date {
-        display:none;
-    }
-    .blog-year {
-        display:none;
     }
 }
 
