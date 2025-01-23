@@ -615,6 +615,9 @@ body {
     .blog-date {
         display:none;
     }
+    .blog-year {
+        display:none;
+    }
 }
 
 
