@@ -373,11 +373,6 @@ body {
       padding: 15px; 
   }
 
-  /* Модальное окно */
-  .modal-content {
-      width: 90%; 
-  }
-
   /* Социальные ссылки */
   .social-links {
       gap: 10px;
@@ -586,7 +581,7 @@ body {
 @media (max-width: 768px) {
     /* Сделаем ширину модального окна на мобильных устройствах меньше */
     .modal-content {
-        width: 90%;
+        width: 70%;
         padding: 15px;
     }
 
